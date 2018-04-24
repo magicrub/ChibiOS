@@ -88,6 +88,9 @@
 #elif defined(STM32F412xx)
 #define PLATFORM_NAME           "STM32F412 High Performance with DSP and FPU"
 
+#elif defined(STM32F413xx)
+#define PLATFORM_NAME           "STM32F413 High Performance with DSP and FPU"
+
 #elif defined(STM32F415xx)
 #define PLATFORM_NAME           "STM32F415 High Performance with DSP and FPU"
 
@@ -264,7 +267,7 @@
 #endif
 
 #if defined(STM32F410xx) || defined(STM32F411xx) ||                         \
-    defined(STM32F412xx)
+    defined(STM32F412xx) || defined(STM32F413xx)
 #define STM32_SYSCLK_MAX        100000000
 #define STM32_HSECLK_MAX        26000000
 #define STM32_HSECLK_BYP_MAX    50000000
@@ -1440,7 +1443,7 @@
 #endif
 #define STM32_OVERDRIVE_REQUIRED    FALSE
 
-#elif defined(STM32F410xx) || defined(STM32F411xx) || defined(STM32F412xx)
+#elif defined(STM32F410xx) || defined(STM32F411xx) || defined(STM32F412xx) || defined(STM32F413xx)
 #if STM32_SYSCLK <= 64000000
 #define STM32_VOS                   STM32_VOS_SCALE3
 #elif STM32_SYSCLK <= 84000000
